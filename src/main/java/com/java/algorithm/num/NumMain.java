@@ -7,10 +7,13 @@ package com.java.algorithm.num;
  */
 public class NumMain {
     public static void main(String[] args) {
-        int a = -5;
+        int a = 5;
         String s = Integer.toBinaryString(a);
-        String s1 = Integer.toHexString(a);
+//        String s1 = Integer.toHexString(a);
         System.out.println(s);
-        System.out.println(s1);
+//        System.out.println(s1);
+        int b = -5;
+        System.out.println(Integer.toBinaryString(b));
+        System.out.println(a & b);
     }
 }
