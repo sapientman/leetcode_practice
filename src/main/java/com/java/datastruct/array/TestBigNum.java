@@ -8,8 +8,8 @@ package com.java.datastruct.array;
 public class TestBigNum {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
-        int[] nums = new int[7000000];
-        for (int i = 0; i < 7000000; i++) {
+        int[] nums = new int[100000000];
+        for (int i = 0; i < 100000000; i++) {
             nums[i] = i;
         }
         System.out.println("执行时间为: " + (System.currentTimeMillis()-startTime)+ "ms");
