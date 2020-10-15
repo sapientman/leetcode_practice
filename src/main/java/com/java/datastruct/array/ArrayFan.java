@@ -113,6 +113,22 @@ public class ArrayFan<E> {
     }
 
     /**
+     * 获取最后一个元素
+     * @return
+     */
+    public E getLast(){
+        return get(size - 1);
+    }
+
+    /**
+     * 获取第一个元素
+     * @return
+     */
+    public E getFirst(){
+        return get(0);
+    }
+
+    /**
      * 设置值
      * @param index
      * @param e
@@ -169,9 +185,14 @@ public class ArrayFan<E> {
         data[size] = null;
 
         // 2. 重置容器大小，当当前的容积减少为原来的1/2时，就减少容量
-        if (size == data.length / 2) {
+        /*if (size == data.length / 4) {
+            resize(data.length/2);
+        }*/
+        // 3. 优化队列动荡，重置容器大小，当当前的容积减少为原来的1/4时，就减少容量
+        if (size == data.length / 4) {
             resize(data.length/2);
         }
+
         return value;
     }
 
