@@ -1,5 +1,7 @@
 package com.java.datastruct.queue;
 
+import com.java.datastruct.list.ListQueue;
+
 import java.util.Random;
 
 /**
@@ -34,5 +36,9 @@ public class TestMain {
         LoopQueue<Integer> loopQueue = new LoopQueue<Integer>(opCount);
         double time2 = testQueue(loopQueue, opCount);
         System.out.println("loopqueue， time: "+ time2 + " s");
+
+        ListQueue<Integer> listQueue = new ListQueue<Integer>();
+        double time3 = testQueue(listQueue, opCount);
+        System.out.println("listpqueue， time: "+ time3 + " s");
     }
 }
